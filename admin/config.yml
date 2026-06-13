@@ -2,9 +2,11 @@ backend:
   name: git-gateway
   branch: main
 
+# Esto es lo que le dice al CMS que use tu sistema de Identity
+identity_url: https://heartfelt-scone-92120d.netlify.app/.netlify/identity
+
 media_folder: "img"
-media_library:
-  name: "uploadcare"
+public_folder: "/img"
 
 collections:
   - name: "productos"
