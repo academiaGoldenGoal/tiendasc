@@ -1,0 +1,13 @@
+backend:
+  name: git-gateway
+  branch: main
+collections:
+  - name: "productos"
+    label: "Productos"
+    folder: "content/productos" # Aquí se guardarán tus productos
+    create: true
+    delete: true # ¡Esto activa el botón de eliminar!
+    fields:
+      - {label: "Nombre", name: "nombre", widget: "string"}
+      - {label: "Precio", name: "precio", widget: "string"}
+      - {label: "Imagen", name: "imagen", widget: "image"}
