@@ -1,17 +1,9 @@
-backend:
-  name: git-gateway
-  branch: main
-
-media_folder: "img"
-media_library:
-  name: "uploadcare"
-
+# ... (backend y media_folder igual)
 collections:
-  - name: "productos"
-    label: "Productos"
-    folder: "content/productos"
+  - name: "orquideas"
+    label: "Mis Orquídeas"
+    folder: "_orquideas" # Cambiado a _orquideas
     create: true
-    delete: true
     fields:
       - {label: "Nombre", name: "nombre", widget: "string"}
       - {label: "Precio", name: "precio", widget: "string"}

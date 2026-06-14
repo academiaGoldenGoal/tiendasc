@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,16 +16,13 @@
     </header>
     
     <div class="grid-orquideas">
-        <div class="card"><img src="img/1.jpg" alt="Orquídea 1"><h3 class="precio">S/ 50.00</h3><a href="https://wa.me/51XXXXXXXXX" class="btn-reservar" target="_blank">RESERVAR</a></div>
-        <div class="card"><img src="img/2.jpg" alt="Orquídea 2"><h3 class="precio">S/ 60.00</h3><a href="https://wa.me/51XXXXXXXXX" class="btn-reservar" target="_blank">RESERVAR</a></div>
-        <div class="card"><img src="img/3.jpg" alt="Orquídea 3"><h3 class="precio">S/ 55.00</h3><a href="https://wa.me/51XXXXXXXXX" class="btn-reservar" target="_blank">RESERVAR</a></div>
-        <div class="card"><img src="img/4.jpg" alt="Orquídea 4"><h3 class="precio">S/ 70.00</h3><a href="https://wa.me/51XXXXXXXXX" class="btn-reservar" target="_blank">RESERVAR</a></div>
-        <div class="card"><img src="img/5.jpg" alt="Orquídea 5"><h3 class="precio">S/ 80.00</h3><a href="https://wa.me/51XXXXXXXXX" class="btn-reservar" target="_blank">RESERVAR</a></div>
-        <div class="card"><img src="img/6.jpg" alt="Orquídea 6"><h3 class="precio">S/ 45.00</h3><a href="https://wa.me/51XXXXXXXXX" class="btn-reservar" target="_blank">RESERVAR</a></div>
-        <div class="card"><img src="img/7.jpg" alt="Orquídea 7"><h3 class="precio">S/ 90.00</h3><a href="https://wa.me/51XXXXXXXXX" class="btn-reservar" target="_blank">RESERVAR</a></div>
-        <div class="card"><img src="img/8.jpg" alt="Orquídea 8"><h3 class="precio">S/ 65.00</h3><a href="https://wa.me/51XXXXXXXXX" class="btn-reservar" target="_blank">RESERVAR</a></div>
-        <div class="card"><img src="img/9.jpg" alt="Orquídea 9"><h3 class="precio">S/ 55.00</h3><a href="https://wa.me/51XXXXXXXXX" class="btn-reservar" target="_blank">RESERVAR</a></div>
+        {% for orquidea in site.orquideas %}
+        <div class="card">
+            <img src="{{ orquidea.imagen }}" alt="{{ orquidea.nombre }}">
+            <h3 class="precio">{{ orquidea.precio }}</h3>
+            <a href="https://wa.me/51XXXXXXXXX" class="btn-reservar" target="_blank">RESERVAR</a>
+        </div>
+        {% endfor %}
     </div>
-
 </body>
 </html>
