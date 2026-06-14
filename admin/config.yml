@@ -1,10 +1,45 @@
+<<<<<<< HEAD
 # ... (backend y media_folder igual)
 collections:
   - name: "orquideas"
     label: "Mis Orquídeas"
     folder: "_orquideas" # Cambiado a _orquideas
+=======
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img"
+public_folder: "/img"
+
+collections:
+  - name: "tienda"
+    label: "Mi Tienda"
+    folder: "content/tienda"
+>>>>>>> e51b84d359de92c497f64464733388a4cd9dd3cb
     create: true
     fields:
-      - {label: "Nombre", name: "nombre", widget: "string"}
+      - {label: "Nombre del Artículo", name: "nombre", widget: "string"}
       - {label: "Precio", name: "precio", widget: "string"}
+      - {label: "Descripción", name: "descripcion", widget: "text"}
+      - {label: "Imagen", name: "imagen", widget: "image"}
+
+  - name: "granja"
+    label: "Mi Granja"
+    folder: "content/granja"
+    create: true
+    delete: true
+    fields:
+      - {label: "Título", name: "titulo", widget: "string"}
+      - {label: "Descripción", name: "descripcion", widget: "text"}
+      - {label: "Imagen", name: "imagen", widget: "image"}
+
+  - name: "orquideas"
+    label: "Mis Orquídeas"
+    folder: "content/orquideas"
+    create: true
+    delete: true
+    fields:
+      - {label: "Nombre de la Orquídea", name: "nombre", widget: "string"}
+      - {label: "Cuidados", name: "cuidados", widget: "text"}
       - {label: "Imagen", name: "imagen", widget: "image"}
